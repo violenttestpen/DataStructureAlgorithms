@@ -1,6 +1,6 @@
 load '../Miscellaneous/Node.rb'
 
-class Queue
+class NodeQueue
     def head
         @head
     end
@@ -20,8 +20,8 @@ class Queue
     
     def enqueue(data)
         node = Node.new(data)
-        @head = @tail = node if @head.nil?
         @tail.next = node unless @tail.nil?
+        @head = @tail = node if @head.nil?
         @tail = @tail.next
     end
     
