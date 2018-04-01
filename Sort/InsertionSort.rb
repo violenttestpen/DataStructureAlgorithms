@@ -23,13 +23,3 @@ def isort(array, debug = false)
     
     return a
 end
-
-def ssort(array)
-    i = 0
-    j = 1
-    while i < array.length - 1
-        while j < array.length
-            
-        end
-    end
-end
