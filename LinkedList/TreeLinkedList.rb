@@ -1,7 +1,7 @@
 load '../Miscellaneous/Node.rb'
 
-class LinkedList
-    def head
+class TreeLinkedList
+    def initialize
         @head  # of type Node
     end
     
@@ -9,19 +9,18 @@ class LinkedList
         # initialize the head if it's an empty LinkedList
         if @head.nil?
             @head = Node(data)
-            return
+        else
+            # traverse until the last node (next is nil)
+            current = @head
+            current = current.next until current.next.nil?
+            current.next = Node(data)
         end
-
-        # traverse until the last node (next is nil)
-        current = @head
-        current = current.next until current.next == nil
-        current.next = Node(data)
     end
     
     def prepend(data)
-        newHead = Node(data)
-        newHead.next = @head
-        @head = newHead
+        new_head = Node(data)
+        new_head.next = @head
+        @head = new_head
     end
     
     def delete_with_value(data)
@@ -33,7 +32,7 @@ class LinkedList
         end
     
         current = @head
-        until current.next == nil
+        until current.next.nil?
             if current.next.data == data then
                 current.next = current.next.next
             end

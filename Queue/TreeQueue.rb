@@ -1,12 +1,9 @@
 load '../Miscellaneous/Node.rb'
 
-class NodeQueue
-    def head
-        @head
-    end
-    
-    def tail
-        @tail
+class TreeQueue
+    def initialize
+        @head = nil
+        @tail = nil
     end
     
     def empty?

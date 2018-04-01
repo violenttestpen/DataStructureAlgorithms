@@ -1,8 +1,8 @@
 load '../Miscellaneous/Node.rb'
 
-class Stack
-    def top
-        @top
+class TreeStack
+    def initialize
+        @top = nil
     end
     
     def empty?
