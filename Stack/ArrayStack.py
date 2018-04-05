@@ -12,4 +12,4 @@ class ArrayStack:
         self.data.append(data)
 
     def pop(self):
-        return self.data.pop()
+        return self.data.pop() if not is_empty() else None
