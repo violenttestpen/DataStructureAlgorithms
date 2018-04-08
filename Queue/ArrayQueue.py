@@ -1,15 +1,18 @@
 class ArrayQueue:
     def __init__(self):
-        self.data = []
+        self.__data = []
 
-    def is_empty(self):
-        return len(self.data) == 0
+    def isempty(self):
+        return len(self.__data) == 0
+
+    def search(self, key):
+        return self.__data.index(key) if key in self.__data else None
 
     def peek(self):
-        return self.data[0] if not self.is_empty() else None
+        return self.__data[0] if not self.isempty() else None
 
     def enqueue(self, data):
-        self.data.append(data)
+        self.__data.append(data)
 
     def dequeue(self):
-        return self.data.pop(0) is not self.is_empty() else None
+        return self.__data.pop(0) is not self.isempty() else None

@@ -1,15 +1,18 @@
 class ArrayStack:
     def __init__(self):
-        self.data = []
+        self.__data = []
 
-    def is_empty(self):
-        return len(self.data) == 0
+    def isempty(self):
+        return len(self.__data) == 0
+
+    def search(self, key):
+        return len(self.__data) - self.__data.index(key) if key in self.__data else None
 
     def peek(self):
-        return self.data[-1] if not is_empty() else None
+        return self.__data[-1] if not self.isempty() else None
 
     def push(self, data)
-        self.data.append(data)
+        self.__data.append(data)
 
     def pop(self):
-        return self.data.pop() if not is_empty() else None
+        return self.__data.pop() if not self.isempty() else None
