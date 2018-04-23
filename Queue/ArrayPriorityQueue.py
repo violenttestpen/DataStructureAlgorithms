@@ -4,7 +4,7 @@ class ArrayPriorityQueue:
         self.__order = []
 
     def isempty(self):
-        return len(self.__data) == 0
+        return self.__data == []
     
     def search(self, key):
         return self.__data.index(key) if key in self.__data else None
@@ -17,12 +17,10 @@ class ArrayPriorityQueue:
         self.__order.append(order)
 
         # Perform a single step insertion sort to move to correct priority [O(n)]
-        i = len(self.__order) - 1
-        while i > 0:
+        for i in range(len(self.__order) - 1, 0, -1):
             if self.__order[i] < self.__order[i - 1]:
                 self.__data[i], self.__data[i - 1] = self.__data[i - 1], self.__data[i]
                 self.__order[i], self.__order[i - 1] = self.__order[i - 1], self.__order[i]
-            i -= 1
 
     def dequeue(self):
         if self.isempty():

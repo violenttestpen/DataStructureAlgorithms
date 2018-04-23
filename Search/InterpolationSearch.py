@@ -29,7 +29,7 @@ def isearch(sample_space, value, debug=False):
 
   return False # cannot find value in the list
 
-def isearch_recursive(sample_space, value, left=0, right=None, debug=False, num_of_checks=0):
+def risearch(sample_space, value, left=0, right=None, debug=False, num_of_checks=0):
   right = right or len(sample_space) - 1
   # Interpolation search [O(log log n)]
   left_value, right_value = sample_space[left], sample_space[right]

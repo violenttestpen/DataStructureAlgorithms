@@ -11,7 +11,7 @@ class ArrayStack:
     def peek(self):
         return self.__data[-1] if not self.isempty() else None
 
-    def push(self, data)
+    def push(self, data):
         self.__data.append(data)
 
     def pop(self):

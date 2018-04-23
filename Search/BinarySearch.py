@@ -26,7 +26,7 @@ def bsearch(sample_space, value, debug=False):
 
   return False # cannot find value in the list
 
-def bsearch_recursive(sample_space, value, left=0, right=None, debug=False, num_of_checks=0):
+def rbsearch(sample_space, value, left=0, right=None, debug=False, num_of_checks=0):
   right = right or len(sample_space) - 1
   # Binary search [O(log n)]
   if left > right:

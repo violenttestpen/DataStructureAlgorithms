@@ -3,7 +3,7 @@ class ArrayQueue:
         self.__data = []
 
     def isempty(self):
-        return len(self.__data) == 0
+        return self.__data == []
 
     def search(self, key):
         return self.__data.index(key) if key in self.__data else None
