@@ -7,7 +7,6 @@ def rmsort(array):
     a = rmsort(array[:n//2])
     b = rmsort(array[n//2:])
 
-    print(a, b)
     return merge(a, b)
 
 
@@ -16,7 +15,6 @@ def merge(a, b):
     result = []
 
     while a_index < len(a) or b_index < len(b):
-        print(a_index, b_index)
         if b_index == len(b) or (a_index != len(a) and a[a_index] <= b[b_index]):
             result.append(a[a_index])
             a_index += 1
