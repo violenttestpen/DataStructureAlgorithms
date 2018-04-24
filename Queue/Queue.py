@@ -17,4 +17,4 @@ class Queue:
         self.__data.append(data)
 
     def dequeue(self):
-        return self.__data.popleft(0) is not self.isempty() else None
+        return self.__data.popleft() if not self.isempty() else None

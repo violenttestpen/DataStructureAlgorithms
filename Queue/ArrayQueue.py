@@ -15,4 +15,4 @@ class ArrayQueue:
         self.__data.append(data)
 
     def dequeue(self):
-        return self.__data.pop(0) is not self.isempty() else None
+        return self.__data.pop(0) if not self.isempty() else None
