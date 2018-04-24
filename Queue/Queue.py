@@ -5,7 +5,7 @@ class Queue:
         self.__data = collections.deque()
 
     def isempty(self):
-        return len(self.__data) == 0
+        return False if self.__data else True
 
     def search(self, key):
         return self.__data.index(key) if key in self.__data else None

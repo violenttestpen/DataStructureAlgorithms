@@ -4,7 +4,7 @@ class ArrayPriorityQueue:
         self.__order = []
 
     def isempty(self):
-        return self.__data == []
+        return False if self.__data else True
     
     def search(self, key):
         return self.__data.index(key) if key in self.__data else None
